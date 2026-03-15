@@ -10,6 +10,7 @@ int main(){
     char estado[20], capital[20], codigoCarta[3];
     int populacao, pontosTuristicos;
     float area, pib, perCapita, densidade;
+    long double superPoder;
 
 
     /*
@@ -22,6 +23,7 @@ int main(){
                  pib: produto interno bruto do estado
            perCapita: pib per capta (por pessoa) do estado
            densidade: densidade demográfica do estado
+          superPoder: recebe a soma de todos os atributos mensuráveis dos estados
     */
     
     printf("\n -----------SUPER TRUNFO PAÍSES-----------\n");
@@ -52,6 +54,7 @@ int main(){
 
     perCapita = pib/populacao; //Cálculo do PIB per capita da carta 1
     densidade = populacao/area; //Cálculo da densidade demográfica da carta 1
+    superPoder = populacao+pontosTuristicos+area+pib+perCapita+(1/densidade); //Cálculo do Super Poder da carta 1
 
     //Imprimindo os dados da carta 1
     printf("\nCódigo da carta 1: %s\n",codigoCarta);
@@ -60,9 +63,12 @@ int main(){
     printf("População: %d habitantes\n",populacao);
     printf("Pontos turísticos: %d pontos\n",pontosTuristicos);
     printf("Área: %.2f km²\n",area);
-    printf("PIB (Produto Interno Bruto: R$ %.2f\n",pib);
+    printf("PIB (Produto Interno Bruto): R$ %.2f\n",pib);
     printf("PIB per capita: R$ %.2f\n",perCapita);
     printf("Densidade demográfica: %.2f hab/km²\n",densidade);
+    printf("Super Poder: %.2Lf\n",superPoder);
+
+
 
     //Recebendo os dados da carta 2
     printf("\nCARTA 2\n");
@@ -89,6 +95,7 @@ int main(){
 
     perCapita = pib/populacao; //Cálculo do PIB per capita da carta 2
     densidade = populacao/area; //Cálculo da densidade demográfica da carta 2
+    superPoder = populacao+pontosTuristicos+area+pib+perCapita+(1/densidade); //Cálculo do Suepr Poder da carta 2
 
     //Imprimindo os dados da carta 2
     printf("\nCódigo da carta 2: %s\n",codigoCarta);
@@ -100,6 +107,7 @@ int main(){
     printf("PIB (Produto Interno Bruto): R$ %.2f\n",pib);
     printf("PIB per capita: R$ %.2f\n",perCapita);
     printf("Densidade demográfica: %.2f hab/km²\n",densidade);
+    printf("Super Poder: %.2Lf\n",superPoder);
 
     return 0;
 }
